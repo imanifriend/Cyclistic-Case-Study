@@ -21,7 +21,7 @@ I will be using SQL in Biqquery to clean and analyze since these datasets would 
 
 First I uploaded the 12 csv files as tables under the divvy_tripdata dataset. I think combined all into one table labeled [divvy_tripdate_combining](https://github.com/imanifriend/portfolio/blob/main/datacombining) This new table contains 5,667,717 rows of data and 13 columns. The ride_id column is our primary key.
 
-[Data Cleaning]
+[Data Cleaning](https://github.com/imanifriend/portfolio/commit/ddc892d0d03f8b96b2426ab0f76f9bf744308196)
 
 I then began cleaning the data by column.
 
