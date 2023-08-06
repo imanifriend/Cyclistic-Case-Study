@@ -1,0 +1,37 @@
+-- Data Combining
+
+SELECT *
+FROM `data-project-1234-392214.divvy_tripdata.202201_divvy_tripdata`
+UNION ALL
+SELECT *
+FROM `data-project-1234-392214.divvy_tripdata.202202_divvy_tripdata`
+UNION ALL
+SELECT *
+FROM `data-project-1234-392214.divvy_tripdata.202203_divvy_tripdata`
+UNION ALL
+SELECT *
+FROM `data-project-1234-392214.divvy_tripdata.202204_divvy_tripdata`
+UNION ALL
+SELECT *
+FROM `data-project-1234-392214.divvy_tripdata.202205_divvy_tripdata`
+UNION ALL
+SELECT *
+FROM `data-project-1234-392214.divvy_tripdata.202206_divvy_tripdata`
+UNION ALL
+SELECT *
+FROM `data-project-1234-392214.divvy_tripdata.202207_divvy_tripdata`
+UNION ALL
+SELECT *
+FROM `data-project-1234-392214.divvy_tripdata.202208_divvy_tripdata`
+UNION ALL
+SELECT *
+FROM `data-project-1234-392214.divvy_tripdata.202209_divvy_tripdata`
+UNION ALL
+SELECT *
+FROM `data-project-1234-392214.divvy_tripdata.202210_divvy_tripdata`
+UNION ALL
+SELECT *
+FROM `data-project-1234-392214.divvy_tripdata.202211_divvy_tripdata`
+UNION ALL
+SELECT *
+FROM `data-project-1234-392214.divvy_tripdata.202212_divvy_tripdata`
