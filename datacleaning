@@ -1,0 +1,63 @@
+SELECT DISTINCT LENGTH(ride_id)
+FROM `data-project-1234-392214.divvy_tripdata.2022_divvy_tripdata_combined` 
+
+/* All values showed to be 16 characters
+no cleaning is necessary */
+
+SELECT DISTINCT rideable_type
+FROM `data-project-1234-392214.divvy_tripdata.2022_divvy_tripdata_combined`
+
+/* There are only two types of bikes, electric and classic.
+A docked option was shown for bikes that have not been moved. These are
+not needed for analysis */
+
+/* checking to confirm there are only two member types */
+
+SELECT DISTINCT member_casual
+FROM `data-project-1234-392214.divvy_tripdata.2022_divvy_tripdata_combined`
+
+/* checking to confirm there are no errors in the start and end station names */
+
+SELECT DISTINCT start_station_name
+FROM `data-project-1234-392214.divvy_tripdata.2022_divvy_tripdata_combined`
+WHERE start_station_name IS NOT NULL
+GROUP BY start_station_name
+ORDER BY start_station_name
+
+SELECT DISTINCT end_station_name
+FROM `data-project-1234-392214.divvy_tripdata.2022_divvy_tripdata_combined`
+WHERE end_station_name IS NOT NULL
+GROUP BY end_station_name
+ORDER BY end_station_name
+
+/* checking for and removing null values */
+
+SELECT *
+FROM `data-project-1234-392214.divvy_tripdata.2022_divvy_tripdata_combined`
+WHERE rideable_type is NULL
+
+SELECT *
+FROM `data-project-1234-392214.divvy_tripdata.2022_divvy_tripdata_combined`
+WHERE started_at is NULL OR
+  ended_at is NULL
+
+SELECT *
+FROM `data-project-1234-392214.divvy_tripdata.2022_divvy_tripdata_combined`
+WHERE start_station_name is NULL OR
+  end_station_name is NULL
+
+SELECT *
+FROM `data-project-1234-392214.divvy_tripdata.2022_divvy_tripdata_combined`
+WHERE started_at IS NOT NULL AND
+  ended_at IS NOT NULL AND
+  start_station_name IS NOT NULL AND
+  end_station_name IS NOT NULL AND
+  start_lat IS NOT NULL AND
+  end_lat IS NOT NULL AND
+  start_lng IS NOT NULL AND
+  end_lng IS NOT NULL
+
+  /* removing 'docked_bikes' since these have not been used 
+  by either customer and will not help with this analysis */
+
+  DELETE FROM `data-project-1234-392214.divvy_tripdata.2022_divvy_tripdata_combined` WHERE rideable_type = 'docked_bike'
