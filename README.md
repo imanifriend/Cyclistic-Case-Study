@@ -3,7 +3,7 @@
 Cyclistic is a bike sharing company located in Chicago. The director of marketing for Cyclistic believes the company’s future success depends on maximizing the number of annual memberships. Therefore, your team wants to understand how casual riders and annual members use Cyclistic bikes differently. From these insights, your team will design a new marketing strategy to convert casual riders into annual members. The marketing analyst team needs to better understand how annual members and casual riders differ, why casual riders would buy a membership, and how digital media could affect their marketing tactics.
 
 Data Source [divvy.tripdate](https://divvy-tripdata.s3.amazonaws.com/index.html)
-# ASk
+# Ask
 Three questions will guide the future marketing program:
 1. How do annual members and casual riders use Cyclistic bikes differently?
 2. Why would casual riders buy Cyclistic annual memberships?
@@ -25,4 +25,13 @@ First I uploaded the 12 csv files as tables under the divvy_tripdata dataset. I 
 
 I then began cleaning the data by column.
 
+Ride_id was checked first to confirm that all the ride ids were the same length. Rideable_type was then checked to confirm that the spelling is the same and only three options showed (electric, classic, and docked). Docked shows bikes not in use so this will be removed as neither memeber has touched these. Member_casusal was then checked to confirm spelling and that there was only two member types. Start_station and end_station were also checked and confirmed to not have any errors. Next null values were removed from all columns.
+
 # Analyze
+
+[Data analysis](https://github.com/imanifriend/Cyclistic-Case-Study/blob/main/analysis)
+
+Next I moved on to analyzing the data for each member type. Queries were for e performed to show the start_lat, end_lat, start_lng, and end_lng for each memeber type and grouped to show the number of trips between these. Quereies were also done for the station_name to show the areas members and casusal riders are likely to start and end at. The same was done for ridable_type to show the total number of rides for each bike type between members and casual users. 
+
+# Share
+
