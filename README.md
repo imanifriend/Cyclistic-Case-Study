@@ -35,3 +35,15 @@ Next I moved on to analyzing the data for each member type. Queries were for e p
 
 # Share
 
+Visualizations were created using Tableau public.
+
+Below shows total trips by member and by the bike type. Both members and casusal riders tend to use the classic bikes over the electric. Members tend to choose the classic at a higher margin. This also confirms what is known, that members are using the bikes more than casual riders. 
+
+![Total trips by member and bike type](https://github.com/imanifriend/Cyclistic-Case-Study/assets/141570594/a058ea69-d03d-4857-ab40-72b241d5f141)
+
+Below marks the start and stop latitude and longitude for each member type. A large cluster is shown for casusal riders around tourist areas while members tend to use around suburban/ neightborhood areas.
+![Sheet 2](https://github.com/imanifriend/Cyclistic-Case-Study/assets/141570594/f1a99cbe-8545-41d8-b43a-3b1900596397)
+
+![Sheet 2 (1)](https://github.com/imanifriend/Cyclistic-Case-Study/assets/141570594/4a9561e9-2a06-47da-8854-2c426f46ad1d)
+
+
