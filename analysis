@@ -1,0 +1,24 @@
+SELECT * FROM `data-project-1234-392214.divvy_tripdata.divvy_tripdata_cleaned`
+
+SELECT member_casual, start_lat, COUNT(ride_id) AS total_trips
+FROM `data-project-1234-392214.divvy_tripdata.2022_divvy_tripdata_combined`
+GROUP BY member_casual, start_lat
+ORDER BY member_casual, total_trips
+
+SELECT member_casual, rideable_type, COUNT(*) AS total_trips
+FROM `data-project-1234-392214.divvy_tripdata.divvy_tripdata_cleaned`
+GROUP BY member_casual, rideable_type
+ORDER BY member_casual, total_trips
+
+SELECT start_station_name, member_casual,
+  AVG(start_lat) AS start_lat, AVG(start_lng) AS start_lng,
+  COUNT(ride_id) AS total_trips
+FROM `data-project-1234-392214.divvy_tripdata.divvy_tripdata_cleaned`
+GROUP BY start_station_name, member_casual;
+
+
+SELECT end_station_name, member_casual,
+  AVG(end_lat) AS end_lat, AVG(end_lng) AS end_lng,
+  COUNT(ride_id) AS total_trips
+FROM `data-project-1234-392214.divvy_tripdata.divvy_tripdata_cleaned`
+GROUP BY end_station_name, member_casual;
